@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siblings Hover</title>
+    <style>
+        body{
+            background-color: rgb(191, 143, 235);
+        }
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 15px;
+            
+        }
+        .card{
+            border: 1px solid white;
+            height: 150px;
+            width: 150px;
+            border-radius: 22px;
+            background-color: rgb(66, 150, 183);
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 112, 0.6) 0px 7px 29px 0px;
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover{
+            transform: translateY(-15px);
+        }
+        .card-container:hover > :not(:hover){
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</body>
+</html>
